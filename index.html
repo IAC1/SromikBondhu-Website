@@ -3,296 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SromikBondhu | শ্রমিকবন্ধু ড্যাশবোর্ড</title>
+    <title>Support Our Mission | Secure TON Donation</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes pulse-glow {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.1); opacity: 0.9; }
+        }
+        .glow-effect {
+            animation: pulse-glow 4s infinite ease-in-out;
+        }
+    </style>
 </head>
-<body class="bg-slate-900 text-gray-100 font-sans min-h-screen pb-24">
+<body class="bg-[#0b0f19] text-slate-100 font-sans min-h-screen flex items-center justify-center p-4 antialiased relative overflow-x-hidden">
 
-    <header class="bg-slate-800 p-4 sticky top-0 z-50 shadow-md border-b border-slate-700">
-        <div class="max-w-md mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold shadow-inner">
-                    <i class="fa-solid fa-user text-lg"></i>
-                </div>
-                <div>
-                    <h1 class="text-sm font-bold text-emerald-400">মোসাম্মৎ রহিমা বেগম</h1>
-                    <p class="text-xs text-gray-400">লাইন নং: ৩ | [span_0](start_span)[span_1](start_span)চুমকি গার্মেন্টস[span_0](end_span)[span_1](end_span)</p>
-                </div>
-            </div>
-            <button onclick="playAudioHelp()" class="bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg animate-pulse transition">
-                <i class="fa-solid fa-microphone text-lg"></i>
-            </button>
+    <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-gradient-to-tr from-blue-600/20 to-transparent rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-gradient-to-br from-cyan-500/10 to-transparent rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="w-full max-w-md bg-[#131a2b]/90 border border-slate-800/80 rounded-3xl p-6 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+        
+        <div class="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-500 via-cyan-400 to-indigo-500"></div>
+
+        <div class="flex justify-center mb-6">
+            <span class="inline-flex items-center space-x-1.5 bg-blue-500/10 border border-blue-500/30 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">
+                <span class="w-2 h-2 bg-blue-400 rounded-full animate-ping"></span>
+                <span>Verified Humanitarian Cause</span>
+            </span>
         </div>
-    </header>
 
-    <main class="max-w-md mx-auto p-4 space-y-6">
-
-        <section id="dashboard-section" class="space-y-6">
-            <h2 class="text-xl font-extrabold text-emerald-400"><i class="fa-solid fa-chart-pie mr-2"></i>আপনার ড্যাশবোর্ড</h2>
-            
-            <div class="bg-gradient-to-br from-emerald-600 to-teal-800 p-6 rounded-2xl shadow-xl relative overflow-hidden border border-emerald-500/30">
-                <div class="absolute right-[-20px] bottom-[-20px] text-emerald-500/20 text-9xl font-bold">৳</div>
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        [span_2](start_span)<p class="text-xs uppercase tracking-wider text-emerald-200">মাসিক সঞ্চিত বেতন[span_2](end_span)</p>
-                        [span_3](start_span)<h3 class="text-3xl font-black mt-1">৳ ২,৫০০[span_3](end_span)</h3>
-                    </div>
-                    <span class="bg-emerald-500/30 text-emerald-200 text-xs px-2.5 py-1 rounded-full border border-emerald-400/20">চলতি মাস</span>
-                </div>
-                <div class="pt-4 border-t border-emerald-500/30 flex justify-between text-xs text-emerald-100">
-                    <span>স্ট্যাটাস: সুরক্ষিত</span>
-                    <span>আইডি: SB-999</span>
+        <div class="flex flex-col items-center text-center space-y-4 mb-6">
+            <div class="relative">
+                <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-cyan-400 rounded-2xl blur-md opacity-40 glow-effect"></div>
+                <div class="relative w-16 h-16 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg">
+                    <i class="fa-solid fa-hand-holding-heart text-3xl text-white"></i>
                 </div>
             </div>
-
-            <div class="grid grid-cols-2 gap-4">
-                <button onclick="switchTab('cashout')" class="bg-gradient-to-br from-amber-500 to-orange-600 p-4 rounded-xl text-left shadow-lg hover:scale-[1.02] transition">
-                    <div class="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center mb-3">
-                        <i class="fa-solid fa-money-bill-transfer text-xl text-white"></i>
-                    </div>
-                    [span_4](start_span)<h4 class="font-bold text-white">জরুরি উত্তোলন[span_4](end_span)</h4>
-                    [span_5](start_span)<p class="text-[11px] text-orange-100 mt-1">তাৎক্ষণিক বিকাশ/নগদ[span_5](end_span)</p>
-                </button>
-
-                <button onclick="switchTab('market')" class="bg-gradient-to-br from-blue-500 to-indigo-600 p-4 rounded-xl text-left shadow-lg hover:scale-[1.02] transition">
-                    <div class="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center mb-3">
-                        <i class="fa-solid fa-basket-shopping text-xl text-white"></i>
-                    </div>
-                    [span_6](start_span)<h4 class="font-bold text-white">ডিসকাউন্ট বাজার[span_6](end_span)</h4>
-                    [span_7](start_span)<p class="text-[11px] text-blue-100 mt-1">সাশ্রয়ী মূল্যে নিত্যপণ্য[span_7](end_span)</p>
-                </button>
-            </div>
-
-            <div id="dashboard-bkash-status" class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-xs flex justify-between items-center">
-                <span class="text-gray-400"><i class="fa-solid fa-link text-pink-500 mr-1"></i> যুক্ত করা বিকাশ নম্বর:</span>
-                <span id="saved-number-display" class="font-bold text-pink-400">যুক্ত করা হয়নি</span>
-            </div>
-
-            <div class="bg-slate-800/80 border border-slate-700 p-4 rounded-xl text-sm text-gray-300">
-                <p class="leading-relaxed">
-                    <i class="fa-solid fa-shield-halved text-emerald-400 mr-1"></i> 
-                    [span_8](start_span)<strong>শ্রমিকবন্ধু লক্ষ্য:</strong> সুদখোর মহাজনের উপর নির্ভরতা কমিয়ে আপনার জন্য দ্রুত ও নিরাপদ আর্থিক সেবা নিশ্চিত করা[span_8](end_span)।
+            <div>
+                <h1 class="text-2xl font-black text-white tracking-wide bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">Empower Through Giving</h1>
+                <p class="text-xs text-slate-400 mt-2 px-2 leading-relaxed">
+                    Aponar ekti khudra sahajjo bodle dite pare oneker jibon. Secure TON network-er maddhome amader pashe thakun ebong manushke sahajjo korun.
                 </p>
             </div>
-        </section>
-
-
-        <section id="cashout-section" class="hidden space-y-4">
-            [span_9](start_span)<h2 class="text-xl font-extrabold text-orange-400"><i class="fa-solid fa-wallet mr-2"></i>জরুরি ক্যাশ-আউট[span_9](end_span)</h2>
-            
-            <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700 shadow-xl space-y-4">
-                <div class="bg-orange-500/10 border border-orange-500/20 text-orange-300 p-3 rounded-lg text-xs">
-                    [span_10](start_span)<i class="fa-solid fa-circle-info mr-1"></i> মহাজনের উচ্চ সুদ এড়িয়ে তাৎক্ষণিক আর্থিক সহায়তা পান[span_10](end_span)। [span_11](start_span)মাস শেষে এটি বেতন থেকে করা হবে[span_11](end_span)।
-                </div>
-
-                <form onsubmit="handleCashout(event)" class="space-y-4">
-                    <div>
-                        <label class="block text-xs font-bold text-gray-400 uppercase mb-2">পেমেন্ট মাধ্যম</label>
-                        <div class="grid grid-cols-2 gap-3">
-                            <label class="border-2 border-slate-600 p-3 rounded-xl flex items-center justify-center space-x-2 cursor-pointer hover:bg-slate-700 bg-slate-700/30">
-                                <input type="radio" name="provider" value="bKash" checked class="accent-pink-500">
-                                <span class="font-bold text-pink-500">bKash</span>
-                            </label>
-                            <label class="border-2 border-slate-600 p-3 rounded-xl flex items-center justify-center space-x-2 cursor-pointer hover:bg-slate-700 bg-slate-700/30">
-                                <input type="radio" name="provider" value="Nagad" class="accent-orange-500">
-                                <span class="font-bold text-orange-500">Nagad</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div>
-                        [span_12](start_span)<label class="block text-xs font-bold text-gray-400 uppercase mb-1">bKash/Nagad নম্বর[span_12](end_span)</label>
-                        <input type="tel" id="cashout-phone-input" placeholder="০১৭XXXXXXXX" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-500" required>
-                        <p class="text-[10px] text-gray-500 mt-1">* নম্বর পরিবর্তন বা নতুন নম্বর যোগ করতে নিচের 'প্রোফাইল' ট্যাবে যান।</p>
-                    </div>
-
-                    <div>
-                        [span_13](start_span)<label class="block text-xs font-bold text-gray-400 uppercase mb-1">টাকার পরিমাণ (সর্বোচ্চ ২০০০ টাকা)[span_13](end_span)</label>
-                        <select class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-500">
-                            <option value="500">৳ ৫০০</option>
-                            <option value="1000">৳ ১,০০০</option>
-                            <option value="1500">৳ ১,৫০০</option>
-                            [span_14](start_span)<option value="2000" selected>৳ ২,০০০[span_14](end_span)</option>
-                        </select>
-                    </div>
-
-                    <div class="bg-slate-900 p-3 rounded-xl text-xs space-y-2 border border-slate-800">
-                        [span_15](start_span)<div class="flex justify-between text-gray-400"><span>সার্ভিস ফি:</span> <span class="font-bold text-gray-200">৳ ৩০[span_15](end_span)</span></div>
-                        [span_16](start_span)<div class="flex justify-between text-emerald-400 font-bold pt-2 border-t border-slate-800 text-sm"><span>আপনি পাবেন:</span> <span>৳ ১,৯৭০[span_16](end_span)</span></div>
-                    </div>
-
-                    <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold py-3 rounded-xl shadow-lg hover:opacity-90 transition">
-                        [span_17](start_span)তাৎক্ষণিক ট্রান্সফার করুন[span_17](end_span)
-                    </button>
-                </form>
-            </div>
-        </section>
-
-
-        <section id="market-section" class="hidden space-y-4">
-            <div class="flex justify-between items-center">
-                [span_18](start_span)<h2 class="text-xl font-extrabold text-blue-400"><i class="fa-solid fa-basket-shopping mr-2"></i>ডিসকাউন্ট বাজার[span_18](end_span)</h2>
-                [span_19](start_span)<span class="bg-blue-500/20 text-blue-300 text-xs px-2.5 py-1 rounded-full font-bold">বাজারমূল্যের চেয়ে কম[span_19](end_span)</span>
-            </div>
-
-            [span_20](start_span)<p class="text-xs text-gray-400">আপনার মাসিক সঞ্চয় থেকে সরাসরি বাজার সুবিধা গ্রহণের সুযোগ[span_20](end_span)। [span_21](start_span)পরিবারের খাদ্য নিরাপত্তা নিশ্চিত করতে কার্যকর সমাধান[span_21](end_span)।</p>
-            
-            <div class="grid grid-cols-2 gap-4">
-                <div class="bg-slate-800 border border-slate-700 p-4 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="text-3xl mb-2">🌾</div>
-                        [span_22](start_span)<h4 class="font-bold text-gray-200 text-sm">মিনিকেট চাল (১ কেজি)[span_22](end_span)</h4>
-                        <div class="flex items-center space-x-2 mt-1">
-                            <span class="text-emerald-400 font-bold text-sm">৳ ৫৫</span>
-                            <span class="text-xs text-gray-500 line-through">৳ ৭০</span>
-                        </div>
-                    </div>
-                    <button onclick="addToCart('চাল')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 rounded-lg transition">ব্যাগে যোগ করুন</button>
-                </div>
-
-                <div class="bg-slate-800 border border-slate-700 p-4 rounded-xl flex flex-col justify-between">
-                    <div>
-                        <div class="text-3xl mb-2">🫘</div>
-                        [span_23](start_span)<h4 class="font-bold text-gray-200 text-sm">মসুর ডাল (১ কেজি)[span_23](end_span)</h4>
-                        <div class="flex items-center space-x-2 mt-1">
-                            <span class="text-emerald-400 font-bold text-sm">৳ ৯৫</span>
-                            <span class="text-xs text-gray-500 line-through">৳ ১৩০</span>
-                        </div>
-                    </div>
-                    <button onclick="addToCart('ডাল')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 rounded-lg transition">ব্যাগে যোগ করুন</button>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="profile-section" class="hidden space-y-4">
-            <h2 class="text-xl font-extrabold text-pink-400"><i class="fa-solid fa-user-gear mr-2"></i>প্রোফাইল সেটিংস</h2>
-            
-            <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700 shadow-xl space-y-4">
-                <h3 class="text-sm font-bold text-gray-300"><i class="fa-solid fa-plus text-pink-500 mr-1"></i> বিকাশ/নগদ নম্বর অ্যাকাউন্ট যুক্ত করুন</h3>
-                
-                <div class="space-y-3">
-                    <div>
-                        <label class="block text-xs text-gray-400 mb-1">আপনার বিকাশ নম্বর লিখুন</label>
-                        <input type="tel" id="bkash-number-input" placeholder="যেমন: ০১৭XXXXXXXX" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-lg tracking-wide focus:outline-none focus:border-pink-500 font-mono">
-                    </div>
-                    
-                    <button onclick="saveBkashNumber()" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 rounded-xl transition shadow-md">
-                        নম্বরটি সেভ ও লিংক করুন
-                    </button>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <nav class="bg-slate-800 border-t border-slate-700 fixed bottom-0 left-0 right-0 p-2 z-50 shadow-2xl">
-        <div class="max-w-md mx-auto flex justify-around items-center">
-            <button onclick="switchTab('dashboard')" id="tab-dashboard" class="flex flex-col items-center space-y-1 text-emerald-400 font-bold text-xs py-1 px-3 rounded-xl">
-                <i class="fa-solid fa-house text-lg"></i>
-                <span>হোম</span>
-            </button>
-            
-            <button onclick="switchTab('cashout')" id="tab-cashout" class="flex flex-col items-center space-y-1 text-gray-400 text-xs py-1 px-3 rounded-xl">
-                <i class="fa-solid fa-money-bill-wave text-lg"></i>
-                <span>ক্যাশ-আউট</span>
-            </button>
-
-            <button onclick="switchTab('market')" id="tab-market" class="flex flex-col items-center space-y-1 text-gray-400 text-xs py-1 px-3 rounded-xl">
-                <i class="fa-solid fa-store text-lg"></i>
-                <span>বাজার</span>
-            </button>
-
-            <button onclick="switchTab('profile')" id="tab-profile" class="flex flex-col items-center space-y-1 text-gray-400 text-xs py-1 px-3 rounded-xl">
-                <i class="fa-solid fa-user-gear text-lg"></i>
-                <span>প্রোফাইল</span>
-            </button>
         </div>
-    </nav>
 
+        <div class="grid grid-cols-2 gap-3 mb-6">
+            <div class="bg-[#0b0f19]/60 border border-slate-800/50 p-3 rounded-xl text-center">
+                <div class="text-xs text-slate-500 font-medium uppercase tracking-wider">Target Reach</div>
+                <div class="text-base font-bold text-emerald-400 mt-0.5">84% Completed</div>
+            </div>
+            <div class="bg-[#0b0f19]/60 border border-slate-800/50 p-3 rounded-xl text-center">
+                <div class="text-xs text-slate-500 font-medium uppercase tracking-wider">Network Fee</div>
+                <div class="text-base font-bold text-cyan-400 mt-0.5">~0.005 TON (Low)</div>
+            </div>
+        </div>
+
+        <div class="bg-[#0b0f19]/80 border border-slate-800/60 rounded-2xl p-4 space-y-3 mb-6">
+            <div class="flex justify-between items-center text-[10px] font-bold text-slate-500 tracking-widest uppercase">
+                <span>Official TON Wallet Address</span>
+                <span class="text-cyan-400 flex items-center"><i class="fa-solid fa-shield-halved mr-1"></i> Non-Custodial</span>
+            </div>
+
+            <div class="flex items-center bg-[#131a2b] border border-slate-700/40 rounded-xl px-3 py-3 group hover:border-slate-600 transition">
+                <span class="text-xs font-mono text-slate-300 tracking-wide break-all select-all flex-1 pr-3" id="wallet-address">UQCvCMmfwJugAgxbMjmUrHI4goe2boXykQwNCDOWcwi8_fGT</span>
+                <button onclick="copyAddress()" class="text-blue-400 hover:text-blue-300 transition p-2 rounded-lg bg-slate-800/80 hover:bg-slate-800 flex items-center justify-center shadow-inner" title="Copy Address">
+                    <i class="fa-regular fa-copy text-sm" id="copy-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <label class="block text-xs font-bold text-slate-400 uppercase tracking-widest text-center">Select Donation Amount</label>
+            
+            <div class="grid grid-cols-3 gap-2.5">
+                <a href="https://tonkeeper.com/transfer/UQCvCMmfwJugAgxbMjmUrHI4goe2boXykQwNCDOWcwi8_fGT?amount=2000000000" target="_blank" class="bg-[#0b0f19] border border-slate-800 hover:border-blue-500 rounded-xl p-3 text-center transition-all duration-200 transform hover:scale-[1.03] group block">
+                    <div class="text-base font-black text-white group-hover:text-blue-400">2 TON</div>
+                    <div class="text-[9px] text-slate-500 mt-0.5">Buy a Meal 🍲</div>
+                </a>
+                <a href="https://tonkeeper.com/transfer/UQCvCMmfwJugAgxbMjmUrHI4goe2boXykQwNCDOWcwi8_fGT?amount=5000000000" target="_blank" class="bg-[#0b0f19] border border-slate-800 hover:border-blue-500 rounded-xl p-3 text-center transition-all duration-200 transform hover:scale-[1.03] group block">
+                    <div class="text-base font-black text-white group-hover:text-blue-400">5 TON</div>
+                    <div class="text-[9px] text-slate-500 mt-0.5">Support Family 👨‍👩‍👦</div>
+                </a>
+                <a href="https://tonkeeper.com/transfer/UQCvCMmfwJugAgxbMjmUrHI4goe2boXykQwNCDOWcwi8_fGT?amount=15000000000" target="_blank" class="bg-[#0b0f19] border border-slate-800 hover:border-blue-500 rounded-xl p-3 text-center transition-all duration-200 transform hover:scale-[1.03] group block">
+                    <div class="text-base font-black text-white group-hover:text-blue-400">15 TON</div>
+                    <div class="text-[9px] text-slate-500 mt-0.5">Medical Care 🩺</div>
+                </a>
+            </div>
+
+            <div class="pt-2">
+                <a href="https://tonkeeper.com/transfer/UQCvCMmfwJugAgxbMjmUrHI4goe2boXykQwNCDOWcwi8_fGT" target="_blank" class="w-full bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white font-bold py-4 px-4 rounded-xl shadow-lg shadow-blue-600/10 hover:shadow-blue-600/20 hover:opacity-95 transition-all duration-200 flex items-center justify-center space-x-2.5 text-sm uppercase tracking-wider transform active:scale-[0.99]">
+                    <i class="fa-solid fa-paper-plane animate-bounce"></i>
+                    <span>Donate with Tonkeeper App</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-5 text-center text-[10px] text-slate-500 leading-relaxed flex items-center justify-center space-x-1">
+            <i class="fa-solid fa-heart text-red-500/60"></i>
+            <span>Thank you for making a difference in someone's life.</span>
+        </div>
+
+    </div>
 
     <script>
-        // বিকাশ নম্বর সেভ করার ফাংশন (Local Storage ব্যবহার করা হয়েছে যেন পেজ রিফ্রেশ করলেও নম্বর মুছে না যায়)
-        function saveBkashNumber() {
-            const numInput = document.getElementById('bkash-number-input').value.trim();
-            
-            if (numInput === "") {
-                alert("❌ দয়া করে একটি সঠিক মোবাইল নম্বর লিখুন।");
-                return;
-            }
-            
-            // লোকাল স্টোরেজে সেভ করা হচ্ছে
-            localStorage.setItem('userBkashNumber', numInput);
-            
-            // UI আপডেট
-            updateNumberUI(numInput);
-            
-            alert("✅ আপনার বিকাশ নম্বরটি সফলভাবে 'শ্রমিকবন্ধু' অ্যাকাউন্টের সাথে যুক্ত করা হয়েছে!");
-            switchTab('dashboard'); // সেভ হওয়ার পর হোমে নিয়ে যাবে
-        }
-
-        // যুক্ত করা নম্বর সব জায়গায় দেখানোর ফাংশন
-        function updateNumberUI(number) {
-            if(number) {
-                document.getElementById('saved-number-display').innerText = number;
-                document.getElementById('cashout-phone-input').value = number;
-                document.getElementById('bkash-number-input').value = number;
-            }
-        }
-
-        // ট্যাব পরিবর্তন লজিক
-        function switchTab(tabName) {
-            document.getElementById('dashboard-section').classList.add('hidden');
-            document.getElementById('cashout-section').classList.add('hidden');
-            document.getElementById('market-section').classList.add('hidden');
-            document.getElementById('profile-section').classList.add('hidden');
-            
-            const tabs = ['dashboard', 'cashout', 'market', 'profile'];
-            tabs.forEach(t => {
-                document.getElementById(`tab-${t}`).className = "flex flex-col items-center space-y-1 text-gray-400 text-xs py-1 px-3 rounded-xl";
+        function copyAddress() {
+            const addressText = document.getElementById('wallet-address').innerText;
+            navigator.clipboard.writeText(addressText).then(() => {
+                const icon = document.getElementById('copy-icon');
+                // Instant Feedback Transformation
+                icon.className = "fa-solid fa-check text-emerald-400 scale-125 transition-all";
+                
+                setTimeout(() => {
+                    icon.className = "fa-regular fa-copy text-sm scale-100";
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
             });
-
-            if(tabName === 'dashboard') {
-                document.getElementById('dashboard-section').classList.remove('hidden');
-                document.getElementById('tab-dashboard').className = "flex flex-col items-center space-y-1 text-emerald-400 font-bold text-xs py-1 px-3 rounded-xl bg-slate-700/40";
-            } else if(tabName === 'cashout') {
-                document.getElementById('cashout-section').classList.remove('hidden');
-                document.getElementById('tab-cashout').className = "flex flex-col items-center space-y-1 text-orange-400 font-bold text-xs py-1 px-3 rounded-xl bg-slate-700/40";
-            } else if(tabName === 'market') {
-                document.getElementById('market-section').classList.remove('hidden');
-                document.getElementById('tab-market').className = "flex flex-col items-center space-y-1 text-blue-400 font-bold text-xs py-1 px-3 rounded-xl bg-slate-700/40";
-            } else if(tabName === 'profile') {
-                document.getElementById('profile-section').classList.remove('hidden');
-                document.getElementById('tab-profile').className = "flex flex-col items-center space-y-1 text-pink-400 font-bold text-xs py-1 px-3 rounded-xl bg-slate-700/40";
-            }
         }
-
-        function handleCashout(event) {
-            event.preventDefault();
-            alert("✅ আপনার জরুরি ক্যাশ-আউট সফল হয়েছে! টাকা কিছুক্ষণের মধ্যে আপনার ওয়ালেটে পৌঁছে যাবে এবং মাস শেষে আপনার বেতন থেকে কর্তন করা হবে।");
-        }
-
-        function addToCart(itemName) {
-            alert(`🛒 ${itemName} আপনার বাজারের ব্যাগে যোগ করা হয়েছে!`);
-        }
-
-        function playAudioHelp() {
-            const text = "বিকাশ নম্বর যুক্ত করতে নিচে ডানদিকের প্রোফাইল বোতামটি চাপুন এবং আপনার মোবাইল নম্বরটি লিখে সেভ করুন।";
-            const speech = new SpeechSynthesisUtterance();
-            speech.text = text;
-            speech.lang = 'bn-BD';
-            window.speechSynthesis.speak(speech);
-        }
-
-        // পেজ লোড হওয়ার সময় পূর্বে সেভ করা নম্বর চেক করা
-        window.onload = function() {
-            const savedNumber = localStorage.getItem('userBkashNumber');
-            if(savedNumber) {
-                updateNumberUI(savedNumber);
-            }
-            switchTab('dashboard');
-        };
     </script>
+
 </body>
 </html>
