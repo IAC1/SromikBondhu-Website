@@ -13,11 +13,11 @@
         <div class="max-w-md mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold shadow-inner">
-                    <i class="fa-solid fa-user-worker text-lg"></i>
+                    <i class="fa-solid fa-user text-lg"></i>
                 </div>
                 <div>
                     <h1 class="text-sm font-bold text-emerald-400">মোসাম্মৎ রহিমা বেগম</h1>
-                    <p class="text-xs text-gray-400">লাইন নং: ৩ | চুমকি গার্মেন্টস</p>
+                    <p class="text-xs text-gray-400">লাইন নং: ৩ | [span_0](start_span)[span_1](start_span)চুমকি গার্মেন্টস[span_0](end_span)[span_1](end_span)</p>
                 </div>
             </div>
             <button onclick="playAudioHelp()" class="bg-indigo-600 hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg animate-pulse transition">
@@ -35,8 +35,8 @@
                 <div class="absolute right-[-20px] bottom-[-20px] text-emerald-500/20 text-9xl font-bold">৳</div>
                 <div class="flex justify-between items-start mb-4">
                     <div>
-                        <p class="text-xs uppercase tracking-wider text-emerald-200">মাসিক সঞ্চিত বেতন</p>
-                        <h3 class="text-3xl font-black mt-1">৳ ২,৫০০</h3>
+                        [span_2](start_span)<p class="text-xs uppercase tracking-wider text-emerald-200">মাসিক সঞ্চিত বেতন[span_2](end_span)</p>
+                        [span_3](start_span)<h3 class="text-3xl font-black mt-1">৳ ২,৫০০[span_3](end_span)</h3>
                     </div>
                     <span class="bg-emerald-500/30 text-emerald-200 text-xs px-2.5 py-1 rounded-full border border-emerald-400/20">চলতি মাস</span>
                 </div>
@@ -51,46 +51,46 @@
                     <div class="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center mb-3">
                         <i class="fa-solid fa-money-bill-transfer text-xl text-white"></i>
                     </div>
-                    <h4 class="font-bold text-white">জরুরি উত্তোলন</h4>
-                    <p class="text-[11px] text-orange-100 mt-1">তাৎক্ষণিক বিকাশ/নগদ</p>
+                    [span_4](start_span)<h4 class="font-bold text-white">জরুরি উত্তোলন[span_4](end_span)</h4>
+                    [span_5](start_span)<p class="text-[11px] text-orange-100 mt-1">তাৎক্ষণিক বিকাশ/নগদ[span_5](end_span)</p>
                 </button>
 
                 <button onclick="switchTab('market')" class="bg-gradient-to-br from-blue-500 to-indigo-600 p-4 rounded-xl text-left shadow-lg hover:scale-[1.02] transition">
                     <div class="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center mb-3">
                         <i class="fa-solid fa-basket-shopping text-xl text-white"></i>
                     </div>
-                    <h4 class="font-bold text-white">ডিসকাউন্ট বাজার</h4>
-                    <p class="text-[11px] text-blue-100 mt-1">সাশ্রয়ী মূল্যে নিত্যপণ্য</p>
+                    [span_6](start_span)<h4 class="font-bold text-white">ডিসকাউন্ট বাজার[span_6](end_span)</h4>
+                    [span_7](start_span)<p class="text-[11px] text-blue-100 mt-1">সাশ্রয়ী মূল্যে নিত্যপণ্য[span_7](end_span)</p>
                 </button>
             </div>
 
-            <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-xs flex justify-between items-center">
+            <div id="dashboard-bkash-status" class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-xs flex justify-between items-center">
                 <span class="text-gray-400"><i class="fa-solid fa-link text-pink-500 mr-1"></i> যুক্ত করা বিকাশ নম্বর:</span>
-                <span class="font-bold text-pink-400 tracking-wide">01774672656</span>
+                <span id="saved-number-display" class="font-bold text-pink-400">যুক্ত করা হয়নি</span>
             </div>
 
             <div class="bg-slate-800/80 border border-slate-700 p-4 rounded-xl text-sm text-gray-300">
                 <p class="leading-relaxed">
                     <i class="fa-solid fa-shield-halved text-emerald-400 mr-1"></i> 
-                    <strong>শ্রমিকবন্ধু লক্ষ্য:</strong> সুদখোর মহাজনের উপর নির্ভরতা কমিয়ে আপনার জন্য দ্রুত ও নিরাপদ আর্থিক সেবা নিশ্চিত করা।
+                    [span_8](start_span)<strong>শ্রমিকবন্ধু লক্ষ্য:</strong> সুদখোর মহাজনের উপর নির্ভরতা কমিয়ে আপনার জন্য দ্রুত ও নিরাপদ আর্থিক সেবা নিশ্চিত করা[span_8](end_span)।
                 </p>
             </div>
         </section>
 
 
         <section id="cashout-section" class="hidden space-y-4">
-            <h2 class="text-xl font-extrabold text-orange-400"><i class="fa-solid fa-wallet mr-2"></i>জরুরি ক্যাশ-আউট</h2>
+            [span_9](start_span)<h2 class="text-xl font-extrabold text-orange-400"><i class="fa-solid fa-wallet mr-2"></i>জরুরি ক্যাশ-আউট[span_9](end_span)</h2>
             
             <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700 shadow-xl space-y-4">
                 <div class="bg-orange-500/10 border border-orange-500/20 text-orange-300 p-3 rounded-lg text-xs">
-                    <i class="fa-solid fa-circle-info mr-1"></i> মহাজনের উচ্চ সুদ এড়িয়ে তাৎক্ষণিক আর্থিক সহায়তা পান। মাস শেষে এটি বেতন থেকে করা হবে।
+                    [span_10](start_span)<i class="fa-solid fa-circle-info mr-1"></i> মহাজনের উচ্চ সুদ এড়িয়ে তাৎক্ষণিক আর্থিক সহায়তা পান[span_10](end_span)। [span_11](start_span)মাস শেষে এটি বেতন থেকে করা হবে[span_11](end_span)।
                 </div>
 
                 <form onsubmit="handleCashout(event)" class="space-y-4">
                     <div>
                         <label class="block text-xs font-bold text-gray-400 uppercase mb-2">পেমেন্ট মাধ্যম</label>
                         <div class="grid grid-cols-2 gap-3">
-                            <label class="border-2 border-pink-500 p-3 rounded-xl flex items-center justify-center space-x-2 cursor-pointer bg-slate-700/50">
+                            <label class="border-2 border-slate-600 p-3 rounded-xl flex items-center justify-center space-x-2 cursor-pointer hover:bg-slate-700 bg-slate-700/30">
                                 <input type="radio" name="provider" value="bKash" checked class="accent-pink-500">
                                 <span class="font-bold text-pink-500">bKash</span>
                             </label>
@@ -102,27 +102,28 @@
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold text-gray-400 uppercase mb-1">bKash/Nagad নম্বর</label>
-                        <input type="tel" id="cashout-phone-input" value="01774672656" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-lg tracking-wide focus:outline-none focus:border-orange-500 font-mono" required>
+                        [span_12](start_span)<label class="block text-xs font-bold text-gray-400 uppercase mb-1">bKash/Nagad নম্বর[span_12](end_span)</label>
+                        <input type="tel" id="cashout-phone-input" placeholder="০১৭XXXXXXXX" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-500" required>
+                        <p class="text-[10px] text-gray-500 mt-1">* নম্বর পরিবর্তন বা নতুন নম্বর যোগ করতে নিচের 'প্রোফাইল' ট্যাবে যান।</p>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold text-gray-400 uppercase mb-1">টাকার পরিমাণ (সর্বোচ্চ ২০০০ টাকা)</label>
+                        [span_13](start_span)<label class="block text-xs font-bold text-gray-400 uppercase mb-1">টাকার পরিমাণ (সর্বোচ্চ ২০০০ টাকা)[span_13](end_span)</label>
                         <select class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-500">
                             <option value="500">৳ ৫০০</option>
                             <option value="1000">৳ ১,০০০</option>
                             <option value="1500">৳ ১,৫০০</option>
-                            <option value="2000" selected>৳ ২,০০০</option>
+                            [span_14](start_span)<option value="2000" selected>৳ ২,০০০[span_14](end_span)</option>
                         </select>
                     </div>
 
                     <div class="bg-slate-900 p-3 rounded-xl text-xs space-y-2 border border-slate-800">
-                        <div class="flex justify-between text-gray-400"><span>সার্ভিস ফি:</span> <span class="font-bold text-gray-200">৳ ৩০</span></div>
-                        <div class="flex justify-between text-emerald-400 font-bold pt-2 border-t border-slate-800 text-sm"><span>আপনি পাবেন:</span> <span>৳ ১,৯৭০</span></div>
+                        [span_15](start_span)<div class="flex justify-between text-gray-400"><span>সার্ভিস ফি:</span> <span class="font-bold text-gray-200">৳ ৩০[span_15](end_span)</span></div>
+                        [span_16](start_span)<div class="flex justify-between text-emerald-400 font-bold pt-2 border-t border-slate-800 text-sm"><span>আপনি পাবেন:</span> <span>৳ ১,৯৭০[span_16](end_span)</span></div>
                     </div>
 
                     <button type="submit" class="w-full bg-gradient-to-r from-amber-500 to-orange-600 text-white font-bold py-3 rounded-xl shadow-lg hover:opacity-90 transition">
-                        তাৎক্ষণিক ট্রান্সফার করুন
+                        [span_17](start_span)তাৎক্ষণিক ট্রান্সফার করুন[span_17](end_span)
                     </button>
                 </form>
             </div>
@@ -131,15 +132,17 @@
 
         <section id="market-section" class="hidden space-y-4">
             <div class="flex justify-between items-center">
-                <h2 class="text-xl font-extrabold text-blue-400"><i class="fa-solid fa-basket-shopping mr-2"></i>ডিসকাউন্ট বাজার</h2>
-                <span class="bg-blue-500/20 text-blue-300 text-xs px-2.5 py-1 rounded-full font-bold">বাজারমূল্যের চেয়ে কম</span>
+                [span_18](start_span)<h2 class="text-xl font-extrabold text-blue-400"><i class="fa-solid fa-basket-shopping mr-2"></i>ডিসকাউন্ট বাজার[span_18](end_span)</h2>
+                [span_19](start_span)<span class="bg-blue-500/20 text-blue-300 text-xs px-2.5 py-1 rounded-full font-bold">বাজারমূল্যের চেয়ে কম[span_19](end_span)</span>
             </div>
 
+            [span_20](start_span)<p class="text-xs text-gray-400">আপনার মাসিক সঞ্চয় থেকে সরাসরি বাজার সুবিধা গ্রহণের সুযোগ[span_20](end_span)। [span_21](start_span)পরিবারের খাদ্য নিরাপত্তা নিশ্চিত করতে কার্যকর সমাধান[span_21](end_span)।</p>
+            
             <div class="grid grid-cols-2 gap-4">
                 <div class="bg-slate-800 border border-slate-700 p-4 rounded-xl flex flex-col justify-between">
                     <div>
                         <div class="text-3xl mb-2">🌾</div>
-                        <h4 class="font-bold text-gray-200 text-sm">মিনিকেট চাল (১ কেজি)</h4>
+                        [span_22](start_span)<h4 class="font-bold text-gray-200 text-sm">মিনিকেট চাল (১ কেজি)[span_22](end_span)</h4>
                         <div class="flex items-center space-x-2 mt-1">
                             <span class="text-emerald-400 font-bold text-sm">৳ ৫৫</span>
                             <span class="text-xs text-gray-500 line-through">৳ ৭০</span>
@@ -151,10 +154,10 @@
                 <div class="bg-slate-800 border border-slate-700 p-4 rounded-xl flex flex-col justify-between">
                     <div>
                         <div class="text-3xl mb-2">🫘</div>
-                        <h4 class="font-bold text-gray-200 text-sm">মসুর ডাল (১ কেজি)</h4>
+                        [span_23](start_span)<h4 class="font-bold text-gray-200 text-sm">মসুর ডাল (১ কেজি)[span_23](end_span)</h4>
                         <div class="flex items-center space-x-2 mt-1">
                             <span class="text-emerald-400 font-bold text-sm">৳ ৯৫</span>
-                            <span class="text-xs text-gray-500 line-through">৳ 130</span>
+                            <span class="text-xs text-gray-500 line-through">৳ ১৩০</span>
                         </div>
                     </div>
                     <button onclick="addToCart('ডাল')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 rounded-lg transition">ব্যাগে যোগ করুন</button>
@@ -167,14 +170,17 @@
             <h2 class="text-xl font-extrabold text-pink-400"><i class="fa-solid fa-user-gear mr-2"></i>প্রোফাইল সেটিংস</h2>
             
             <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700 shadow-xl space-y-4">
-                <h3 class="text-sm font-bold text-gray-300"><i class="fa-solid fa-check-circle text-emerald-400 mr-1"></i> আপনার লিংকড অ্যাকাউন্ট</h3>
+                <h3 class="text-sm font-bold text-gray-300"><i class="fa-solid fa-plus text-pink-500 mr-1"></i> বিকাশ/নগদ নম্বর অ্যাকাউন্ট যুক্ত করুন</h3>
                 
                 <div class="space-y-3">
                     <div>
-                        <label class="block text-xs text-gray-400 mb-1">ডিফল্ট বিকাশ নম্বর</label>
-                        <input type="tel" id="bkash-number-input" value="01774672656" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-lg tracking-wide focus:outline-none font-mono" readonly>
+                        <label class="block text-xs text-gray-400 mb-1">আপনার বিকাশ নম্বর লিখুন</label>
+                        <input type="tel" id="bkash-number-input" placeholder="যেমন: ০১৭XXXXXXXX" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-lg tracking-wide focus:outline-none focus:border-pink-500 font-mono">
                     </div>
-                    <p class="text-xs text-gray-500">* এই নম্বরটি সিস্টেমে স্থায়ীভাবে ডিফাইন করা হয়েছে।</p>
+                    
+                    <button onclick="saveBkashNumber()" class="w-full bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 rounded-xl transition shadow-md">
+                        নম্বরটি সেভ ও লিংক করুন
+                    </button>
                 </div>
             </div>
         </section>
@@ -207,6 +213,34 @@
 
 
     <script>
+        // বিকাশ নম্বর সেভ করার ফাংশন (Local Storage ব্যবহার করা হয়েছে যেন পেজ রিফ্রেশ করলেও নম্বর মুছে না যায়)
+        function saveBkashNumber() {
+            const numInput = document.getElementById('bkash-number-input').value.trim();
+            
+            if (numInput === "") {
+                alert("❌ দয়া করে একটি সঠিক মোবাইল নম্বর লিখুন।");
+                return;
+            }
+            
+            // লোকাল স্টোরেজে সেভ করা হচ্ছে
+            localStorage.setItem('userBkashNumber', numInput);
+            
+            // UI আপডেট
+            updateNumberUI(numInput);
+            
+            alert("✅ আপনার বিকাশ নম্বরটি সফলভাবে 'শ্রমিকবন্ধু' অ্যাকাউন্টের সাথে যুক্ত করা হয়েছে!");
+            switchTab('dashboard'); // সেভ হওয়ার পর হোমে নিয়ে যাবে
+        }
+
+        // যুক্ত করা নম্বর সব জায়গায় দেখানোর ফাংশন
+        function updateNumberUI(number) {
+            if(number) {
+                document.getElementById('saved-number-display').innerText = number;
+                document.getElementById('cashout-phone-input').value = number;
+                document.getElementById('bkash-number-input').value = number;
+            }
+        }
+
         // ট্যাব পরিবর্তন লজিক
         function switchTab(tabName) {
             document.getElementById('dashboard-section').classList.add('hidden');
@@ -236,8 +270,7 @@
 
         function handleCashout(event) {
             event.preventDefault();
-            const phone = document.getElementById('cashout-phone-input').value;
-            alert(`✅ আপনার জরুরি ক্যাশ-আউট সফল হয়েছে! টাকা কিছুক্ষণের মধ্যে আপনার বিকাশ নম্বর ${phone}-এ পৌঁছে যাবে এবং মাস শেষে আপনার বেতন থেকে কর্তন করা হবে।`);
+            alert("✅ আপনার জরুরি ক্যাশ-আউট সফল হয়েছে! টাকা কিছুক্ষণের মধ্যে আপনার ওয়ালেটে পৌঁছে যাবে এবং মাস শেষে আপনার বেতন থেকে কর্তন করা হবে।");
         }
 
         function addToCart(itemName) {
@@ -245,14 +278,19 @@
         }
 
         function playAudioHelp() {
-            const text = "আপনার বিকাশ নম্বর শূন্য এক সাত সাত চার ছয় সাত দুই ছয় পাঁচ ছয় অ্যাকাউন্টটির সাথে স্থায়ীভাবে যুক্ত করা আছে। জরুরি টাকা তুলতে কমলা বোতাম এবং বাজারে যেতে নীল বোতাম চাপুন।";
+            const text = "বিকাশ নম্বর যুক্ত করতে নিচে ডানদিকের প্রোফাইল বোতামটি চাপুন এবং আপনার মোবাইল নম্বরটি লিখে সেভ করুন।";
             const speech = new SpeechSynthesisUtterance();
             speech.text = text;
             speech.lang = 'bn-BD';
             window.speechSynthesis.speak(speech);
         }
 
+        // পেজ লোড হওয়ার সময় পূর্বে সেভ করা নম্বর চেক করা
         window.onload = function() {
+            const savedNumber = localStorage.getItem('userBkashNumber');
+            if(savedNumber) {
+                updateNumberUI(savedNumber);
+            }
             switchTab('dashboard');
         };
     </script>
