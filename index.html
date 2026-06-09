@@ -64,6 +64,11 @@
                 </button>
             </div>
 
+            <div class="bg-slate-800 p-3 rounded-xl border border-slate-700 text-xs flex justify-between items-center">
+                <span class="text-gray-400"><i class="fa-solid fa-link text-pink-500 mr-1"></i> যুক্ত করা বিকাশ নম্বর:</span>
+                <span class="font-bold text-pink-400 tracking-wide">01774672656</span>
+            </div>
+
             <div class="bg-slate-800/80 border border-slate-700 p-4 rounded-xl text-sm text-gray-300">
                 <p class="leading-relaxed">
                     <i class="fa-solid fa-shield-halved text-emerald-400 mr-1"></i> 
@@ -78,18 +83,18 @@
             
             <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700 shadow-xl space-y-4">
                 <div class="bg-orange-500/10 border border-orange-500/20 text-orange-300 p-3 rounded-lg text-xs">
-                    <i class="fa-solid fa-circle-info mr-1"></i> মহাজনের উচ্চ সুদ এড়িয়ে তাৎক্ষণিক আর্থিক সহায়তা পান। মাস শেষে এটি বেতন থেকে কাটা হবে।
+                    <i class="fa-solid fa-circle-info mr-1"></i> মহাজনের উচ্চ সুদ এড়িয়ে তাৎক্ষণিক আর্থিক সহায়তা পান। মাস শেষে এটি বেতন থেকে করা হবে।
                 </div>
 
                 <form onsubmit="handleCashout(event)" class="space-y-4">
                     <div>
                         <label class="block text-xs font-bold text-gray-400 uppercase mb-2">পেমেন্ট মাধ্যম</label>
                         <div class="grid grid-cols-2 gap-3">
-                            <label class="border-2 border-slate-600 p-3 rounded-xl flex items-center justify-center space-x-2 cursor-pointer hover:bg-slate-700 bg-slate-700/30 check-label">
+                            <label class="border-2 border-pink-500 p-3 rounded-xl flex items-center justify-center space-x-2 cursor-pointer bg-slate-700/50">
                                 <input type="radio" name="provider" value="bKash" checked class="accent-pink-500">
                                 <span class="font-bold text-pink-500">bKash</span>
                             </label>
-                            <label class="border-2 border-slate-600 p-3 rounded-xl flex items-center justify-center space-x-2 cursor-pointer hover:bg-slate-700 bg-slate-700/30 check-label">
+                            <label class="border-2 border-slate-600 p-3 rounded-xl flex items-center justify-center space-x-2 cursor-pointer hover:bg-slate-700 bg-slate-700/30">
                                 <input type="radio" name="provider" value="Nagad" class="accent-orange-500">
                                 <span class="font-bold text-orange-500">Nagad</span>
                             </label>
@@ -98,7 +103,7 @@
 
                     <div>
                         <label class="block text-xs font-bold text-gray-400 uppercase mb-1">bKash/Nagad নম্বর</label>
-                        <input type="tel" placeholder="০১৭XXXXXXXX" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-orange-500" required>
+                        <input type="tel" id="cashout-phone-input" value="01774672656" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-lg tracking-wide focus:outline-none focus:border-orange-500 font-mono" required>
                     </div>
 
                     <div>
@@ -130,21 +135,17 @@
                 <span class="bg-blue-500/20 text-blue-300 text-xs px-2.5 py-1 rounded-full font-bold">বাজারমূল্যের চেয়ে কম</span>
             </div>
 
-            <p class="text-xs text-gray-400">আপনার মাসিক সঞ্চয় থেকে সরাসরি বাজার সুবিধা গ্রহণের সুযোগ। পরিবারের খাদ্য নিরাপত্তা নিশ্চিত করতে কার্যকর সমাধান।</p>
-            
             <div class="grid grid-cols-2 gap-4">
                 <div class="bg-slate-800 border border-slate-700 p-4 rounded-xl flex flex-col justify-between">
                     <div>
                         <div class="text-3xl mb-2">🌾</div>
                         <h4 class="font-bold text-gray-200 text-sm">মিনিকেট চাল (১ কেজি)</h4>
                         <div class="flex items-center space-x-2 mt-1">
-                            <span class="text-emerald-400 font-bold text-sm">৳ ৫5</span>
+                            <span class="text-emerald-400 font-bold text-sm">৳ ৫৫</span>
                             <span class="text-xs text-gray-500 line-through">৳ ৭০</span>
                         </div>
                     </div>
-                    <button onclick="addToCart('চাল')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 rounded-lg transition">
-                        ব্যাগে যোগ করুন
-                    </button>
+                    <button onclick="addToCart('চাল')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 rounded-lg transition">ব্যাগে যোগ করুন</button>
                 </div>
 
                 <div class="bg-slate-800 border border-slate-700 p-4 rounded-xl flex flex-col justify-between">
@@ -153,26 +154,27 @@
                         <h4 class="font-bold text-gray-200 text-sm">মসুর ডাল (১ কেজি)</h4>
                         <div class="flex items-center space-x-2 mt-1">
                             <span class="text-emerald-400 font-bold text-sm">৳ ৯৫</span>
-                            <span class="text-xs text-gray-500 line-through">৳ ১৩০</span>
+                            <span class="text-xs text-gray-500 line-through">৳ 130</span>
                         </div>
                     </div>
-                    <button onclick="addToCart('ডাল')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 rounded-lg transition">
-                        <i class="fa-solid fa-plus mr-1"></i> ব্যাগে যোগ করুন
-                    </button>
+                    <button onclick="addToCart('ডাল')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 rounded-lg transition">ব্যাগে যোগ করুন</button>
                 </div>
+            </div>
+        </section>
 
-                <div class="bg-slate-800 border border-slate-700 p-4 rounded-xl flex flex-col justify-between">
+
+        <section id="profile-section" class="hidden space-y-4">
+            <h2 class="text-xl font-extrabold text-pink-400"><i class="fa-solid fa-user-gear mr-2"></i>প্রোফাইল সেটিংস</h2>
+            
+            <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700 shadow-xl space-y-4">
+                <h3 class="text-sm font-bold text-gray-300"><i class="fa-solid fa-check-circle text-emerald-400 mr-1"></i> আপনার লিংকড অ্যাকাউন্ট</h3>
+                
+                <div class="space-y-3">
                     <div>
-                        <div class="text-3xl mb-2">🍾</div>
-                        <h4 class="font-bold text-gray-200 text-sm">সয়াবিন তেল (১ লিটার)</h4>
-                        <div class="flex items-center space-x-2 mt-1">
-                            <span class="text-emerald-400 font-bold text-sm">৳ ১৩৫</span>
-                            <span class="text-xs text-gray-500 line-through">৳ ১৬৫</span>
-                        </div>
+                        <label class="block text-xs text-gray-400 mb-1">ডিফল্ট বিকাশ নম্বর</label>
+                        <input type="tel" id="bkash-number-input" value="01774672656" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-lg tracking-wide focus:outline-none font-mono" readonly>
                     </div>
-                    <button onclick="addToCart('তেল')" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 rounded-lg transition">
-                        <i class="fa-solid fa-plus mr-1"></i> ব্যাগে যোগ করুন
-                    </button>
+                    <p class="text-xs text-gray-500">* এই নম্বরটি সিস্টেমে স্থায়ীভাবে ডিফাইন করা হয়েছে।</p>
                 </div>
             </div>
         </section>
@@ -181,80 +183,78 @@
 
     <nav class="bg-slate-800 border-t border-slate-700 fixed bottom-0 left-0 right-0 p-2 z-50 shadow-2xl">
         <div class="max-w-md mx-auto flex justify-around items-center">
-            <button onclick="switchTab('dashboard')" id="tab-dashboard" class="flex flex-col items-center space-y-1 text-emerald-400 font-bold transition text-xs py-1 px-3 rounded-xl">
+            <button onclick="switchTab('dashboard')" id="tab-dashboard" class="flex flex-col items-center space-y-1 text-emerald-400 font-bold text-xs py-1 px-3 rounded-xl">
                 <i class="fa-solid fa-house text-lg"></i>
                 <span>হোম</span>
             </button>
             
-            <button onclick="switchTab('cashout')" id="tab-cashout" class="flex flex-col items-center space-y-1 text-gray-400 hover:text-gray-200 transition text-xs py-1 px-3 rounded-xl">
+            <button onclick="switchTab('cashout')" id="tab-cashout" class="flex flex-col items-center space-y-1 text-gray-400 text-xs py-1 px-3 rounded-xl">
                 <i class="fa-solid fa-money-bill-wave text-lg"></i>
                 <span>ক্যাশ-আউট</span>
             </button>
 
-            <button onclick="switchTab('market')" id="tab-market" class="flex flex-col items-center space-y-1 text-gray-400 hover:text-gray-200 transition text-xs py-1 px-3 rounded-xl">
+            <button onclick="switchTab('market')" id="tab-market" class="flex flex-col items-center space-y-1 text-gray-400 text-xs py-1 px-3 rounded-xl">
                 <i class="fa-solid fa-store text-lg"></i>
                 <span>বাজার</span>
+            </button>
+
+            <button onclick="switchTab('profile')" id="tab-profile" class="flex flex-col items-center space-y-1 text-gray-400 text-xs py-1 px-3 rounded-xl">
+                <i class="fa-solid fa-user-gear text-lg"></i>
+                <span>প্রোফাইল</span>
             </button>
         </div>
     </nav>
 
 
     <script>
-        // ১. ট্যাব পরিবর্তন করার ফাংশন (SPA লজিক)
+        // ট্যাব পরিবর্তন লজিক
         function switchTab(tabName) {
-            // সব সেকশন হাইড করা
             document.getElementById('dashboard-section').classList.add('hidden');
             document.getElementById('cashout-section').classList.add('hidden');
             document.getElementById('market-section').classList.add('hidden');
+            document.getElementById('profile-section').classList.add('hidden');
             
-            // সব বটম মেনুর কালার রিসেট করা
-            const tabs = ['dashboard', 'cashout', 'market'];
+            const tabs = ['dashboard', 'cashout', 'market', 'profile'];
             tabs.forEach(t => {
-                const tabBtn = document.getElementById(`tab-${t}`);
-                tabBtn.className = "flex flex-col items-center space-y-1 text-gray-400 transition text-xs py-1 px-3 rounded-xl";
+                document.getElementById(`tab-${t}`).className = "flex flex-col items-center space-y-1 text-gray-400 text-xs py-1 px-3 rounded-xl";
             });
 
-            // নির্দিষ্ট সেকশন ও বাটন এক্টিভ করা
             if(tabName === 'dashboard') {
                 document.getElementById('dashboard-section').classList.remove('hidden');
-                document.getElementById('tab-dashboard').className = "flex flex-col items-center space-y-1 text-emerald-400 font-bold transition text-xs py-1 px-3 rounded-xl bg-slate-700/40";
+                document.getElementById('tab-dashboard').className = "flex flex-col items-center space-y-1 text-emerald-400 font-bold text-xs py-1 px-3 rounded-xl bg-slate-700/40";
             } else if(tabName === 'cashout') {
                 document.getElementById('cashout-section').classList.remove('hidden');
-                document.getElementById('tab-cashout').className = "flex flex-col items-center space-y-1 text-orange-400 font-bold transition text-xs py-1 px-3 rounded-xl bg-slate-700/40";
+                document.getElementById('tab-cashout').className = "flex flex-col items-center space-y-1 text-orange-400 font-bold text-xs py-1 px-3 rounded-xl bg-slate-700/40";
             } else if(tabName === 'market') {
                 document.getElementById('market-section').classList.remove('hidden');
-                document.getElementById('tab-market').className = "flex flex-col items-center space-y-1 text-blue-400 font-bold transition text-xs py-1 px-3 rounded-xl bg-slate-700/40";
+                document.getElementById('tab-market').className = "flex flex-col items-center space-y-1 text-blue-400 font-bold text-xs py-1 px-3 rounded-xl bg-slate-700/40";
+            } else if(tabName === 'profile') {
+                document.getElementById('profile-section').classList.remove('hidden');
+                document.getElementById('tab-profile').className = "flex flex-col items-center space-y-1 text-pink-400 font-bold text-xs py-1 px-3 rounded-xl bg-slate-700/40";
             }
         }
 
-        // ২. ক্যাশ-আউট সফল হওয়ার ডেমো এলার্ট
         function handleCashout(event) {
             event.preventDefault();
-            alert("✅ আপনার জরুরি ক্যাশ-আউট সফল হয়েছে! টাকা কিছুক্ষণের মধ্যে আপনার ওয়ালেটে পৌঁছে যাবে এবং মাস শেষে আপনার বেতন থেকে কর্তন করা হবে।");
+            const phone = document.getElementById('cashout-phone-input').value;
+            alert(`✅ আপনার জরুরি ক্যাশ-আউট সফল হয়েছে! টাকা কিছুক্ষণের মধ্যে আপনার বিকাশ নম্বর ${phone}-এ পৌঁছে যাবে এবং মাস শেষে আপনার বেতন থেকে কর্তন করা হবে।`);
         }
 
-        // ৩. ডিসকাউন্ট বাজারে পণ্য যোগ করার মেসেজ
         function addToCart(itemName) {
             alert(`🛒 ${itemName} আপনার বাজারের ব্যাগে যোগ করা হয়েছে!`);
         }
 
-        // ৪. ভয়েস/অডিও সহায়তার জন্য ডেমো ভয়েস অ্যাসিস্ট্যান্স (অক্ষরজ্ঞানহীন শ্রমিকদের জন্য)
         function playAudioHelp() {
-            // ব্রাউজারের স্পিচ ইঞ্জিন ব্যবহার করে বাংলায় কথা বলাবে
-            const text = "শ্রমিক বন্ধু অ্যাপে আপনাকে স্বাগতম। জরুরি টাকা তুলতে কমলা রঙের বোতাম চাপুন, আর কম দামে চাল ডাল কিনতে নীল রঙের বোতাম চাপুন।";
+            const text = "আপনার বিকাশ নম্বর শূন্য এক সাত সাত চার ছয় সাত দুই ছয় পাঁচ ছয় অ্যাকাউন্টটির সাথে স্থায়ীভাবে যুক্ত করা আছে। জরুরি টাকা তুলতে কমলা বোতাম এবং বাজারে যেতে নীল বোতাম চাপুন।";
             const speech = new SpeechSynthesisUtterance();
             speech.text = text;
             speech.lang = 'bn-BD';
-            speech.volume = 1;
-            speech.rate = 0.9; // একটু আস্তে কথা বলার জন্য
             window.speechSynthesis.speak(speech);
         }
 
-        // প্রথমবার পেজ লোড হলে ড্যাশবোর্ড ট্যাব দেখাবে
         window.onload = function() {
             switchTab('dashboard');
         };
     </script>
-
 </body>
 </html>
