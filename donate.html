@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ডোনেট করুন | শ্রমিক বন্ধু</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Hind Siliguri', sans-serif; }
+    .hero-bg {
+      background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), 
+                  url('https://images.unsplash.com/photo-1581091226825-a5c5d5a5e5e5?w=1600') center/cover no-repeat;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-200">
+
+  <!-- Header -->
+  <nav class="bg-slate-900 border-b border-slate-700 py-4 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-orange-500">শ্রমিক বন্ধু</a>
+      <div class="space-x-6">
+        <a href="index.html" class="hover:text-orange-400">হোম</a>
+        <a href="#" class="hover:text-orange-400">সেবা</a>
+        <a href="donate.html" class="text-orange-400 font-semibold">ডোনেট</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-bg min-h-[70vh] flex items-center">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">শ্রমিকদের পাশে দাঁড়ান</h1>
+      <p class="text-2xl text-yellow-300 mb-8">আপনার ছোট ডোনেশনও একজন গার্মেন্টস শ্রমিকের জীবন বদলে দিতে পারে</p>
+      <div class="inline-flex bg-white/10 backdrop-blur-md text-white px-8 py-3 rounded-full text-lg">
+        সরাসরি শ্রমিকদের কাছে পৌঁছে যাবে
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Options -->
+  <section class="py-20 bg-slate-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 text-orange-400">ডোনেশনের পরিমাণ নির্বাচন করুন</h2>
+      
+      <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div onclick="selectAmount(500)" class="donate-card bg-slate-800 hover:bg-orange-600/20 border border-slate-700 rounded-3xl p-8 text-center cursor-pointer transition">
+          <p class="text-4xl font-bold text-orange-400">৫০০৳</p>
+          <p class="text-slate-400 mt-2">একজন শ্রমিকের ১ দিনের খাবার</p>
+        </div>
+        <div onclick="selectAmount(1000)" class="donate-card bg-slate-800 hover:bg-orange-600/20 border border-slate-700 rounded-3xl p-8 text-center cursor-pointer transition">
+          <p class="text-4xl font-bold text-orange-400">১০০০৳</p>
+          <p class="text-slate-400 mt-2">জরুরি ওষুধ সহায়তা</p>
+        </div>
+        <div onclick="selectAmount(2000)" class="donate-card bg-slate-800 hover:bg-orange-600/20 border-2 border-orange-500 rounded-3xl p-8 text-center cursor-pointer transition scale-105">
+          <p class="text-4xl font-bold text-orange-400">২০০০৳</p>
+          <p class="text-slate-400 mt-2">পরিবারের ১ সপ্তাহের খাবার</p>
+          <span class="text-xs bg-orange-500 text-white px-3 py-1 rounded-full mt-3 inline-block">সবচেয়ে জনপ্রিয়</span>
+        </div>
+        <div onclick="selectAmount(5000)" class="donate-card bg-slate-800 hover:bg-orange-600/20 border border-slate-700 rounded-3xl p-8 text-center cursor-pointer transition">
+          <p class="text-4xl font-bold text-orange-400">৫০০০৳</p>
+          <p class="text-slate-400 mt-2">মাসিক সাপোর্ট</p>
+        </div>
+      </div>
+
+      <!-- Custom Amount -->
+      <div class="max-w-md mx-auto mt-12 text-center">
+        <p class="mb-4 text-slate-400">অথবা নিজের পরিমাণ দিন</p>
+        <div class="flex border border-slate-600 rounded-full overflow-hidden">
+          <span class="bg-slate-800 px-6 flex items-center text-xl">৳</span>
+          <input id="customAmount" type="number" placeholder="যেকোনো পরিমাণ" 
+                 class="flex-1 bg-transparent text-center text-2xl py-6 focus:outline-none">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Donate -->
+  <section class="py-16 bg-slate-950">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-10 text-orange-400">আপনার ডোনেশন কোথায় যাবে?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-900 p-8 rounded-3xl">
+          <div class="text-5xl mb-4">🛒</div>
+          <h3 class="font-semibold mb-2">সাশ্রয়ী খাদ্য</h3>
+          <p class="text-slate-400">ডিসকাউন্টেড গ্রোসারি কিনে শ্রমিকদের কাছে পৌঁছে দেওয়া</p>
+        </div>
+        <div class="bg-slate-900 p-8 rounded-3xl">
+          <div class="text-5xl mb-4">🏥</div>
+          <h3 class="font-semibold mb-2">চিকিৎসা সহায়তা</h3>
+          <p class="text-slate-400">জরুরি অসুস্থতা ও দুর্ঘটনায় চিকিৎসার খরচ</p>
+        </div>
+        <div class="bg-slate-900 p-8 rounded-3xl">
+          <div class="text-5xl mb-4">📚</div>
+          <h3 class="font-semibold mb-2">শিক্ষা ও দক্ষতা</h3>
+          <p class="text-slate-400">শ্রমিক ও তাদের সন্তানদের প্রশিক্ষণ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-20 bg-gradient-to-r from-orange-600 to-red-600">
+    <div class="max-w-2xl mx-auto text-center px-6">
+      <h2 class="text-4xl font-bold mb-6">এখনই ডোনেট করুন</h2>
+      <button onclick="alert('ধন্যবাদ! (এখনো পেমেন্ট গেটওয়ে যোগ করা হয়নি)')" 
+              class="bg-white text-slate-900 px-16 py-6 rounded-full text-2xl font-bold hover:bg-yellow-300 transition">
+        ডোনেট করুন
+      </button>
+      <p class="mt-8 text-sm opacity-75">সব ডোনেশন স্বচ্ছভাবে ব্যবহার করা হয় এবং রিপোর্ট প্রকাশ করা হয়</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-12 text-center">
+    <p class="text-slate-400">© ২০২৬ শ্রমিক বন্ধু | চট্টগ্রাম, বাংলাদেশ</p>
+  </footer>
+
+  <script>
+    function selectAmount(amount) {
+      document.getElementById('customAmount').value = amount;
+      alert(`আপনি ${amount} টাকা ডোনেট করতে চান। ধন্যবাদ!`);
+    }
+  </script>
+</body>
+</html>
