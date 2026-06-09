@@ -3,270 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>শ্রমিকবন্ধু - গার্মেন্টস শ্রমিকদের আপদকালীন আর্থিক সহায়তা</title>
+    <title>SromikBondhu - श्रमिक বন্ধু</title>
     <style>
+        /* Premium Typography & Attractive Palette */
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap');
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #0f172a 0%, #0284c7 100%); /* Deep Navy to Neon Cyan Blue */
+            --accent-gradient: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%); /* Vibrant Gold to Hot Orange */
+            --bg-light: #f1f5f9; /* Super Clean Soft Gray */
+            --text-dark: #0f172a;
+            --card-bg: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Hind Siliguri', sans-serif;
         }
+
         body {
-            background-color: #1a1a1a;
-            color: #ffffff;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.6;
         }
-        .container {
-            width: 85%;
-            margin: auto;
-            overflow: hidden;
-        }
+
+        /* Attractive Header */
         header {
-            background: #111;
-            border-bottom: 3px solid #ffcc00;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ffcc00;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 5px 15px;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-        nav ul li a:hover {
-            color: #ffcc00;
-        }
-        #hero {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('hero-bg.jpg') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 50px 20px;
             text-align: center;
-            padding-top: 60px;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            box-shadow: 0 10px 25px rgba(2, 132, 199, 0.2);
         }
-        #hero h1 {
-            font-size: 42px;
-            color: #ffcc00;
-            margin-bottom: 20px;
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        #hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #ddd;
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            font-weight: 400;
         }
-        .btn {
-            background: #ffcc00;
-            color: #111;
-            padding: 12px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #fff;
-            color: #111;
-        }
-        #about {
-            padding: 80px 0;
-            background: #222;
-            text-align: center;
-        }
-        .section-title {
-            font-size: 32px;
-            color: #ffcc00;
-            margin-bottom: 40px;
-        }
-        #about p {
-            font-size: 18px;
+
+        /* Container */
+        .container {
             max-width: 800px;
-            margin: auto;
-            color: #ccc;
+            margin: -20px auto 40px auto; /* Overlaps slightly with header for a modern look */
+            padding: 0 20px;
         }
-        #features {
-            padding: 80px 0;
-            background: #1a1a1a;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        .feature-box {
-            background: #262626;
-            padding: 30px;
-            border-radius: 8px;
+
+        /* Premium Card */
+        .card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
             text-align: center;
-            border-top: 4px solid #ffcc00;
-            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.8);
         }
-        .feature-box:hover {
-            transform: translateY(-10px);
-        }
-        .feature-box h3 {
-            color: #ffcc00;
+
+        .card h2 {
+            color: #0369a1;
             margin-bottom: 15px;
+            font-size: 2rem;
+            font-weight: 700;
         }
-        #app-demo {
-            padding: 80px 0;
-            background: #222;
-            text-align: center;
+
+        .card p {
+            color: #475569;
+            margin-bottom: 30px;
+            font-size: 1.15rem;
         }
-        .demo-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 30px;
+
+        /* High-Conversion Attractive Button */
+        .btn {
+            display: inline-block;
+            background: var(--accent-gradient);
+            color: white;
+            padding: 16px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 8px 25px rgba(234, 88, 12, 0.4);
+            transition: all 0.3s ease;
         }
-        .demo-text {
+
+        .btn:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(234, 88, 12, 0.6);
+        }
+
+        /* Address & Contact Info Info Box */
+        .info-box {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f8fafc;
+            border-radius: 12px;
+            border-left: 5px solid #0284c7;
+            font-size: 1rem;
+            color: #334155;
+            display: inline-block;
             text-align: left;
-            max-width: 500px;
         }
-        .demo-text ul {
-            list-style: none;
-        }
-        .demo-text ul li {
-            margin-bottom: 15px;
-            font-size: 18px;
-            position: relative;
-            padding-left: 25px;
-        }
-        .demo-text ul li::before {
-            content: "✔";
-            position: absolute;
-            left: 0;
-            color: #ffcc00;
-        }
-        #contact {
-            padding: 80px 0;
-            background: #111;
-            text-align: center;
-        }
-        #contact p {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #ccc;
-        }
+
+        /* Footer */
         footer {
-            background: #0a0a0a;
             text-align: center;
-            padding: 20px 0;
-            font-size: 14px;
-            color: #666;
-            border-top: 1px solid #222;
+            padding: 20px 20px 40px 20px;
+            color: #64748b;
+            font-size: 0.95rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <div class="logo">শ্রমিকবন্ধু</div>
-            <nav>
-                <ul>
-                    <li><a href="#hero">হোম</a></li>
-                    <li><a href="#about">পরিচিতি</a></li>
-                    <li><a href="#features">সুবিধাসমূহ</a></li>
-                    <li><a href="#app-demo">অ্যাপ ড্যাশবোর্ড</a></li>
-                    <li><a href="#contact">যোগাযোগ</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>শ্রমিক বন্ধু (SromikBondhu)</h1>
+        <p>শ্রমিক ভাই-বোনদের পাশে সবসময়</p>
     </header>
 
-    <section id="hero">
-        <div class="container">
-            <h1>গার্মেন্টস শ্রমিকদের আপদকালীন আর্থিক সহায়তা ও সাশ্রয়ী বাজার সুবিধা</h1>
-            <p>সুদখোর মহাজনের উপর নির্ভরতা কমিয়ে শ্রমিকদের জন্য দ্রুত, সাশ্রয়ী ও নিরাপদ ডিজিটাল আর্থিক সেবা।</p>
-            <a href="#about" class="btn">আরও জানুন</a>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">প্রকল্প পরিচিতি</h2>
-            <p>বাংলাদেশের গার্মেন্টস শ্রমিকরা আর্থিকভাবে অত্যন্ত ঝুঁকিপূর্ণ। জরুরি প্রয়োজনে তারা উচ্চ সুদে মহাজনদের কাছ থেকে ঋণ নিতে বাধ্য হন। "শ্রমিকবন্ধু" একটি মোবাইল অ্যাপ যা মোবাইল প্রযুক্তির মাধ্যমে সাশ্রয়ী জরুরি নগদ সহায়তা ও বাজার সুবিধা প্রদান করে শ্রমিকদের আর্থিক স্বাধীনতা নিশ্চিত করে।</p>
-        </div>
-    </section>
-
-    <section id="features">
-        <div class="container">
-            <h2 class="section-title">মূল সুবিধাসমূহ</h2>
-            <div class="features-grid">
-                <div class="feature-box">
-                    <h3>জরুরি আর্থিক সহায়তা</h3>
-                    <p>মহাজনের উপর নির্ভরতা ছাড়াই তাৎক্ষণিক নগদ টাকা তোলার সুবিধা।</p>
-                </div>
-                <div class="feature-box">
-                    <h3>মাত্র ৩০ টাকা সার্ভিস ফি</h3>
-                    <p>খুবই সীমিত এবং সাশ্রয়ী সার্ভিস চার্জে টাকা ক্যাশ-আউট করার সুযোগ।</p>
-                </div>
-                <div class="feature-box">
-                    <h3>তাৎক্ষণিক ট্রান্সফার</h3>
-                    <p>সরাসরি নিজের bKash বা Nagad নম্বরে মুহূর্তের মধ্যে টাকা চলে আসবে।</p>
-                </div>
-                <div class="feature-box">
-                    <h3>সাশ্রয়ী ডিসকাউন্ট বাজার</h3>
-                    <p>চাল, ডাল ও অন্যান্য মৌলিক নিত্যপ্রয়োজনীয় পণ্য বাজারমূল্যের চেয়ে কম দামে ক্রয়ের সুবিধা।</p>
-                </div>
+    <div class="container">
+        <div class="card">
+            <h2>আমাদের সেবাসমূহ</h2>
+            <p>আমরা আপনাদের অধিকার রক্ষা এবং নতুন কাজের সুযোগ তৈরি করতে কাজ করে যাচ্ছি। খুব শীঘ্রই আমাদের অ্যাপ এবং পূর্ণাঙ্গ ওয়েবসাইট লাইভ হতে যাচ্ছে!</p>
+            
+            <a href="#" class="btn">বিস্তারিত জানুন</a>
+            
+            <br><br>
+            <div class="info-box">
+                📍 <strong>ঠিকানা:</strong> চট্টগ্রাম, বাংলাদেশ।
             </div>
         </div>
-    </section>
-
-    <section id="app-demo">
-        <div class="container">
-            <h2 class="section-title">সহজ ও আধুনিক অ্যাপ ড্যাশবোর্ড</h2>
-            <div class="demo-content">
-                <div class="demo-img">
-                    <div style="width: 280px; height: 500px; background: #262626; border: 8px solid #444; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: #ffcc00; font-weight: bold; box-shadow: 0px 10px 20px rgba(0,0,0,0.5);">
-                        [ App Mockup ]
-                    </div>
-                </div>
-                <div class="demo-text">
-                    <ul>
-                        <li><strong>হোম ড্যাশবোর্ড:</strong> মাসিক সঞ্চিত বেতন খুব সহজেই দেখতে পাবেন।</li>
-                        <li><strong>জরুরি উত্তোলন বোতাম (কমলা):</strong> এক ক্লিকেই তাৎক্ষণিক bKash/Nagad ট্রান্সফার।</li>
-                        <li><strong>ডিসকাউন্ট বাজার বোতাম (বেগুনী):</strong> সাশ্রয়ী মূল্যে নিত্যপণ্য অর্ডার করার সুবিধা।</li>
-                        <li><strong>অডিও সহায়তা (মাইক আইকন):</strong> অক্ষরজ্ঞানহীন শ্রমিকদের জন্য বিশেষ ভয়েস গাইড সুবিধা।</li>
-                        <li><strong>সহজ পরিশোধ:</strong> মাস শেষে বেতন থেকে স্বয়ংক্রিয় ঝামেলামুক্ত পরিশোধ ব্যবস্থা।</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">যোগাযোগ করুন</h2>
-            <p>আমাদের প্রজেক্ট সম্পর্কে জানতে বা পার্টনারশিপের জন্য যোগাযোগ করুন:</p>
-            <p>📞 ফোন: <strong>+880-1700-000000</strong></p>
-            <p>✉ ইমেইল: <strong>info@sromikbondhu.com.bd</strong></p>
-            <p>📍 ঠিকানা: ঢাকা, বাংলাদেশ</p>
-        </div>
-    </section>
+    </div>
 
     <footer>
-        <p>&copy; 2026 শ্রমিকবন্ধু (SromikBondhu Tech). সর্বস্বত্ব সংরক্ষিত।</p>
+        <p>&copy; 2026 SromikBondhu. All Rights Reserved.</p>
     </footer>
 
 </body>
